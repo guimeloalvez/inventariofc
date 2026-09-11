@@ -30,6 +30,7 @@ equipamentoRouter.post(
     } catch (error: any) {
       console.error(error);
 
+      // Desafio Opcional: Se for erro de duplicidade no Postgres (código 23505)
       if (error.code === "23505") {
         return response.status(409).json({
           error: "Conflito: Número de série já cadastrado",

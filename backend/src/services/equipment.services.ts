@@ -24,6 +24,7 @@ class EquipamentoService {
 
     const equipamento = res.rows[0];
 
+    //Mesma verificação de !cliente
     if (!equipamento) {
       throw new Error("O banco não retornou o equipamento cadastrado");
     }
